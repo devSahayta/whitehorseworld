@@ -1,0 +1,31 @@
+.home-i-carousel-cont {
+  /* border: solid 1px red; */
+  margin-top: 90px;
+  padding: 25px 0 65px;
+}
+
+.home-about-para {
+  /* border: solid 1px red; */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.home-contact-container {
+  background-color: rgb(39, 39, 39);
+}
+
+.hc-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2%;
+}
+
+.hc-details a {
+  display: inline-block;
+}
+
+.hc-details h4 {
+  font-size: 19px;
+}

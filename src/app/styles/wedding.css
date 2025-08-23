@@ -1,0 +1,213 @@
+.w-sec1-bg-container {
+  /* border: solid 1px blue; */
+  filter: brightness(60%);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.w-sec1-bg-container .imageWrapper {
+  height: 650px;
+}
+
+.w-sec1-bg-container .slick-dots {
+  display: none !important ;
+}
+
+.plan-wedding-button {
+  border: solid 2px oklch(85.2% 0.199 91.936);
+  /* background-color: oklch(85.2% 0.199 91.936); */
+  display: inline-flex;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 9px 21px;
+  color: #ffffff;
+  background-color: rgba(233, 27, 150, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.plan-wedding-button::before {
+  content: "";
+  position: absolute;
+  top: -105%;
+  left: 0;
+  width: 150%;
+  height: 10%;
+  transform: rotate(45deg);
+  background-color: oklch(85.2% 0.199 91.936);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.plan-wedding-button:hover::before {
+  /* top: 0; */
+  height: 450%;
+}
+
+.plan-wedding-button:hover {
+  color: black;
+}
+
+.plan-wedding-button::after {
+  content: "";
+  position: absolute;
+  top: -90%;
+  left: 0;
+  width: 8px;
+  height: 300%;
+  transform: rotate(35deg);
+  background: linear-gradient(
+    90deg,
+    rgba(185, 185, 185, 0.411) 20%,
+    rgba(255, 255, 255, 0.623) 50%,
+    rgba(185, 185, 185, 0.507) 90%
+  );
+  animation-name: rotateinf;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  z-index: -2;
+}
+
+@keyframes rotateinf {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+.wed-button {
+  background-color: oklch(80.2% 0.199 91.936);
+  padding: 6px 21px;
+  color: black;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border-style: solid;
+  border-width: 2px;
+  border-color: oklch(80.2% 0.199 91.936);
+}
+
+.wed-button:hover {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: oklch(85.2% 0.199 91.936);
+  background-color: rgba(233, 27, 150, 0.9);
+  box-shadow: rgba(255, 255, 110, 0.95) 0px 25px 50px -12px;
+}
+
+/* service learn more button */
+.w-service-learn-more {
+  border: solid 2px oklch(85.2% 0.199 91.936);
+  padding: 5px 18px;
+  border-radius: 12px;
+  color: #ffffff;
+  background-color: oklch(85.2% 0.199 91.936);
+  transition: all 0.3s ease;
+}
+
+.w-service-learn-more:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.w-gallery-see-more {
+  border: solid 2px oklch(78.2% 0.199 91.936);
+  display: flex;
+  width: fit-content;
+  color: oklch(85.2% 0.199 91.936);
+  padding: 7px 21px;
+  margin: auto;
+  margin-top: 45px;
+  transition: color 0.3s ease;
+}
+
+.w-gallery-see-more:hover {
+  color: #ffffff;
+}
+
+.book-consultation-button {
+  border: solid 2px oklch(85.2% 0.199 91.936);
+  padding: 9px 21px;
+  color: black;
+  border-radius: 12px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.book-consultation-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 300%;
+  transform: rotate(35deg) translateY(-50%);
+  background: linear-gradient(
+    90deg,
+    rgba(185, 185, 185, 0.411) 20%,
+    rgba(255, 255, 255, 0.623) 50%,
+    rgba(185, 185, 185, 0.507) 90%
+  );
+  animation-name: rotateinf;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  z-index: -2;
+}
+
+.book-consultation-button::after {
+  content: "";
+  position: absolute;
+  top: -90%;
+  right: -20%;
+  width: 10%;
+  height: 350%;
+  background-color: oklch(85.2% 0.199 91.936);
+  transform: rotate(-15deg);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.book-consultation-button:hover::after {
+  width: 150%;
+  height: 350%;
+}
+
+.book-consultation-button:hover {
+  color: #ffffff;
+}
+
+/* wedding about */
+.w-about-img {
+  border: solid 4px #ffffff;
+  height: 350px;
+}
+
+/* instagram-follow */
+.w-follow-instagram {
+  /* border: solid 2px burlywood; */
+  background-color: oklch(80.2% 0.199 91.936);
+  color: #ffffff;
+  padding: 9px 23px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  transition: all 0.3s ease;
+}
+
+.w-follow-instagram:hover {
+  background-color: oklch(85.2% 0.199 91.936);
+  color: black;
+}

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://whitehorseworld.com
+
+# Sitemaps
+Sitemap: https://whitehorseworld.com/sitemap.xml
