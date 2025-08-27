@@ -96,14 +96,6 @@ export default function WorkPage() {
         <HomeCarousel2 />
       </div>
 
-      <div>
-        <Testimonials />
-      </div>
-
-      <div>
-        <HomeContact />
-      </div>
-
       <WhFooter />
     </>
   );

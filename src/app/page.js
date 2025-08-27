@@ -7,6 +7,7 @@ import { motion } from "motion/react";
 import "./styles/wedding.css";
 import HeroSection from "./components/wedding/HeroSection";
 import WServiceSection from "./components/wedding/WServiceSection";
+
 import WhHeader from "./components/WhHeader";
 import WGallerySection from "./components/wedding/WGallerySection";
 import WTestimonialsSection from "./components/wedding/WTestimonialsSection";
@@ -17,6 +18,11 @@ import { FaDiamond } from "react-icons/fa6";
 import WInstagram from "./components/wedding/WInstagram";
 import WGallerySection2 from "./components/wedding/WGallerySection2";
 import ScrollPage from "./components/ScrollPage";
+import HomeCarousel2 from "./components/home/HomeCarousel2";
+import ServicesCarousel from "./components/home/ServicesCarousel";
+
+// import HomeAppoinment from ".AppointmentSection ";
+// import AppointmentSection from "./components/home/AppointmentSection";
 
 export default function Home() {
   return (
@@ -58,9 +64,9 @@ export default function Home() {
         {/* custom testimonials */}
         {/* <WTestimonialsSection /> */}
 
-        <section className="w-full bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white py-24 px-6">
+        {/* <section className="w-full bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white py-24 px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            {/* Left: Visual */}
+            // { Left: Visual }
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +80,7 @@ export default function Home() {
               />
             </motion.div>
 
-            {/* Right: Text */}
+            // { Right: Text }
             <motion.div
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -102,7 +108,55 @@ export default function Home() {
               </a>
             </motion.div>
           </div>
-        </section>
+        </section> */}
+
+        {/* Appointment Section */}
+
+        <div>
+          {/* Your other page content */}
+
+          {/* {AppointmentSection} */}
+
+          {/* More page content */}
+        </div>
+
+        {/*  Service at home */}
+
+        <div className=" home-i-carousel-cont">
+          <div className=" text-center py-14 ">
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+              className=" text-5xl md:text-4xl font-bold text-yellow-400 mb-2 "
+            >
+              Our Services
+            </motion.h2>
+            <motion.h5
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+            >
+              Explore the visuals that reflect our dedication to creating
+              unforgettable events
+            </motion.h5>
+            <Divider
+              className=" w-about-divider text-yellow-400 "
+              style={{
+                width: "25%",
+                margin: "auto",
+                marginBottom: "56px",
+                marginTop: "25px",
+              }}
+            >
+              <FaDiamond size={10} />{" "}
+              <FaDiamond size={20} className=" ml-1 mr-1 " />
+              <FaDiamond size={10} />
+            </Divider>
+          </div>
+
+          {ServicesCarousel()}
+        </div>
 
         {/* Contact CTA */}
         <section
