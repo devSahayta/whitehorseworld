@@ -18,7 +18,7 @@ const blogs = [
   {
     id: 2,
     title: "Corporate Event Innovation",
-    desc: "Innovative solutions that transform corporate gatherings into unforgettable experiences.",
+    desc: "howInnovative solutions that transform corporate gatherings into unforgettable experiences.",
     img: "/images/work/work-exhibition-fair.jpg",
   },
   {
