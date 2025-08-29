@@ -270,18 +270,24 @@
 /* eslint-disable @next/next/no-img-element */
 
 /* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Modal } from "rsuite";
 
 const originalImages = [
-  { src: "/images/gallery/gallery1.jpg", caption: "FESTIVALS & CULTURAL" },
-  { src: "/images/gallery/01.jpg", caption: "MULTIMEDIA & VIRTUAL" },
-  { src: "/images/gallery/_DSC2560.jpg", caption: "SPORTING & COMPETITIVE" },
-  { src: "/images/gallery/02.jpg", caption: "ECO HABITATS & TOURISM" },
-  { src: "/images/gallery/gallery1.jpg", caption: "HERITAGE & TRADITIONS" },
-  { src: "/images/gallery/11985.jpg", caption: "GLOBAL CELEBRATIONS" },
+  { src: "/images/gallery/5.jpg", caption: "GOVERNMENT EVENTS" },
+  { src: "/images/gallery/3.png", caption: "CORPORATE EVENTS" },
+  { src: "/images/gallery/6.png", caption: "SPORTS MANAGEMENT" },
+  { src: "/images/gallery/2.png", caption: "ARTIST MANAGEMENT" },
+  { src: "/images/gallery/8.png", caption: "INTERNATIONAL ACTS" },
+  { src: "/images/gallery/gallery1.jpg", caption: "DESTINATION WEDDINGS" },
+  { src: "/images/gallery/01.jpg", caption: "EVENTS PLANNING" },
+  { src: "/images/gallery/_DSC2560.jpg", caption: "EXHIBITION & FAIRS" },
+  { src: "/images/gallery/12.jpg", caption: "WEDDING PLANNING" },
 ];
 
 export default function WGallerySection2() {
@@ -293,52 +299,64 @@ export default function WGallerySection2() {
     setOpen(true);
   };
 
-  // Function to repeat images twice for seamless loop
-  const repeatedImages = [...originalImages, ...originalImages];
+  // Split into 3 different columns
+  const columnImages = [
+    originalImages.slice(0, 3),
+    originalImages.slice(3, 6),
+    originalImages.slice(6, 9),
+  ];
 
-  // Motion variant for continuous loop
-  const scrollVariants = (direction = "up") => ({
+  // ✅ Seamless loop (no gaps)
+  const scrollVariants = (direction = "up", speed = 15) => ({
     animate: {
-      y: direction === "up" ? ["0%", "-100%"] : ["-100%", "0%"],
+      y: direction === "up" ? ["0%", "-50%"] : ["-50%", "0%"], // only half, since doubled list
       transition: {
         repeat: Infinity,
-        duration: 15, // speed (lower = faster)
+        duration: speed,
         ease: "linear",
       },
     },
   });
 
   return (
-    <section className="w-full h-screen bg-black overflow-hidden flex">
-      {/* 3 Columns */}
-      {[0, 1, 2].map((col) => (
-        <motion.div
-          key={col}
-          className="flex-1 flex flex-col"
-          variants={scrollVariants(col === 1 ? "down" : "up")}
-          animate="animate"
-        >
-          {repeatedImages.map((img, i) => (
-            <div
-              key={i}
-              className="relative cursor-pointer border border-black"
-              onClick={() => handleOpen(img.src)}
-            >
-              <img
-                src={img.src}
-                alt={`Gallery ${i}`}
-                className="w-full object-cover"
-              />
-              {/* Overlay Caption - always visible */}
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <p className="text-white text-lg font-bold text-center px-2">
-                  {img.caption}
-                </p>
-              </div>
+    <section className="w-full h-screen bg-black overflow-hidden">
+      {/* Grid Layout */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 h-full">
+        {columnImages.map((images, col) => (
+          <motion.div
+            key={col}
+            className="flex flex-col"
+            variants={scrollVariants(
+              col % 2 === 0 ? "up" : "down",
+              18 - col * 3
+            )}
+            animate="animate"
+          >
+            {/* ✅ Wrap inside one container & duplicate list */}
+            <div>
+              {[...images, ...images].map((img, i) => (
+                <div
+                  key={i}
+                  className="relative cursor-pointer border border-black"
+                  onClick={() => handleOpen(img.src)}
+                >
+                  <img
+                    src={img.src}
+                    alt={`Gallery ${i}`}
+                    className="w-full object-cover"
+                  />
+                  {/* Caption overlay */}
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <p className="text-white text-sm sm:text-base md:text-lg font-bold text-center px-2">
+                      {img.caption}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </motion.div>
-      ))}
+          </motion.div>
+        ))}
+      </div>
 
       {/* Modal Preview */}
       <Modal open={open} onClose={() => setOpen(false)} size="lg">

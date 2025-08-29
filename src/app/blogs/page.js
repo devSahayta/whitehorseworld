@@ -1,12 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Testimonials from "../components/home/Testimonials";
-import FAQSection from "../components/home/FAQSection";
+// import Testimonials from "../components/home/Testimonials";
+import FAQSection from "../components/FAQSection";
 import { FaDiamond } from "react-icons/fa6";
 import { Divider } from "rsuite";
 import WhHeader from "../components/WhHeader";
 import WhFooter from "../components/WhFooter";
+import Testimonials1 from "../components/home/Testimonials1";
 
 const blogs = [
   {
@@ -113,10 +114,12 @@ export default function BlogPage() {
         </div>
 
         {/* Testimonials Section */}
-        <div className="mt-20">{Testimonials()}</div>
+        {/* <div>{Testimonials1() pageTheme="black"}</div> */}
+
+        <>{}</>
 
         {/* FAQs Section */}
-        <div className="mt-20">{FAQSection()}</div>
+        <>{FAQSection()}</>
       </section>
 
       <WhFooter />

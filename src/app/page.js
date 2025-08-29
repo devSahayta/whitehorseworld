@@ -5,21 +5,24 @@ import Image from "next/image";
 import { motion } from "motion/react";
 
 import "./styles/wedding.css";
-import HeroSection from "./components/wedding/HeroSection";
-import WServiceSection from "./components/wedding/WServiceSection";
+// import HeroSection from "./components/wedding/HeroSection";
+// import WServiceSection from "./components/wedding/WServiceSection";
 
 import WhHeader from "./components/WhHeader";
-import WGallerySection from "./components/wedding/WGallerySection";
-import WTestimonialsSection from "./components/wedding/WTestimonialsSection";
+// import WGallerySection from "./components/wedding/WGallerySection";
+// import WTestimonialsSection from "./components/wedding/WTestimonialsSection";
 import WhFooter from "./components/WhFooter";
 import HomeAbout from "./components/home/HomeAbout";
 import { Divider } from "rsuite";
-import { FaDiamond } from "react-icons/fa6";
+import { FaDiamond, FaRegFileLines } from "react-icons/fa6";
 import WInstagram from "./components/wedding/WInstagram";
 import WGallerySection2 from "./components/wedding/WGallerySection2";
+import PromoBanner from "./components/home/PromoBanner";
 import ScrollPage from "./components/ScrollPage";
-import HomeCarousel2 from "./components/home/HomeCarousel2";
+// import HomeCarousel2 from "./components/home/HomeCarousel2";
 import ServicesCarousel from "./components/home/ServicesCarousel";
+// import Testimonials from "./components/home/Testimonials";
+import Testimonials1 from "./components/home/Testimonials1";
 
 // import HomeAppoinment from ".AppointmentSection ";
 // import AppointmentSection from "./components/home/AppointmentSection";
@@ -119,6 +122,7 @@ export default function Home() {
 
           {/* More page content */}
         </div>
+        {PromoBanner()}
 
         {/*  Service at home */}
 
@@ -159,6 +163,7 @@ export default function Home() {
         </div>
 
         {/* Contact CTA */}
+
         <section
           className=" w-full py-32 px-7 text-center overflow-hidden "
           style={{ backgroundColor: "#FCE5F5" }}
@@ -173,7 +178,9 @@ export default function Home() {
             Book a Consultation
           </a>
         </section>
+        {/* <Testimonials1 /> */}
 
+        {Testimonials1()}
         <WInstagram />
 
         {/* Footer */}

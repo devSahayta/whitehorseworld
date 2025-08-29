@@ -97,6 +97,16 @@ const WhHeader = ({ pageTheme = "black" }) => {
             >
               Services
             </motion.a>
+
+            <motion.a
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 1.7 }}
+              href="/WeddingPage"
+              className=" h-link "
+            >
+              Wedding
+            </motion.a>
             <motion.a
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +133,7 @@ const WhHeader = ({ pageTheme = "black" }) => {
               href="/blogs"
               className=" h-link "
             >
-              Blog
+              Resources
             </motion.a>
             <motion.a
               initial={{ opacity: 0, y: 50 }}
@@ -151,6 +161,12 @@ const WhHeader = ({ pageTheme = "black" }) => {
               Services
             </a>
             <a
+              href="/WeddingPage"
+              className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
+            >
+              Wedding
+            </a>
+            <a
               href="/portfolio"
               className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
             >
@@ -166,7 +182,7 @@ const WhHeader = ({ pageTheme = "black" }) => {
               href="/blogs"
               className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
             >
-              Blog
+              Resources
             </a>
             <a
               href="/contact"

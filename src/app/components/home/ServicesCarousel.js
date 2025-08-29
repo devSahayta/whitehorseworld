@@ -6,19 +6,35 @@ import { motion } from "framer-motion";
 
 // ✅ Slides with Event Categories
 const slides = [
-  { id: 1, img: "/images/events/slider1.jpg", title: "Government Events" },
-  { id: 2, img: "/images/events/slider3.jpg", title: "Corporate Events" },
-  { id: 3, img: "/images/events/slider5.jpg", title: "Sports Events" },
-  { id: 4, img: "/images/events/slider4.jpg", title: "Artist Management" },
-  { id: 5, img: "/images/events/slider6.jpg", title: "Exhibition & Fairs" },
+  {
+    id: 1,
+    img: "/images/work/work-government-event.jpg",
+    title: "Government Events",
+  },
+  {
+    id: 2,
+    img: "/images/work/work-corporate-event.jpg",
+    title: "Corporate Events",
+  },
+  { id: 3, img: "/images/work/work-sports.jpg", title: "Sports Events" },
+  {
+    id: 4,
+    img: "/images/work/work-artist-management.png",
+    title: "Artist Management",
+  },
+  {
+    id: 5,
+    img: "/images/work/work-exhibition-fair.jpg",
+    title: "Exhibition & Fairs",
+  },
   {
     id: 6,
-    img: "/images/events/slider1.jpg",
+    img: "/images/work/work-international-events.jpg",
     title: "International Acts",
   },
   {
     id: 7,
-    img: "/images/events/slider4.jpg",
+    img: "/images/work/work-database-management.jpg",
     title: "Database & Response Mgmt",
   },
   {
@@ -26,10 +42,14 @@ const slides = [
     img: "/images/events/slider3.jpg",
     title: "Brand Activation & Marketing",
   },
-  { id: 9, img: "/images/events/slider5.jpg", title: "Digital Marketing" },
+  {
+    id: 9,
+    img: "/images/work/work-SOCIAL-NETWORKING-02-655x545.jpg",
+    title: "Digital Marketing",
+  },
   {
     id: 10,
-    img: "/images/events/slider6.jpg",
+    img: "/images/work/work-theme1-655x545.jpg",
     title: "Theme Installations",
   },
 ];

@@ -140,6 +140,9 @@
 // export default WhFooter;
 
 "use client";
+import { Link } from "react-router-dom";
+
+import FAQSection from "./FAQSection";
 
 import Image from "next/image";
 import {
@@ -241,7 +244,7 @@ const WhFooter = ({ pageTheme = "black" }) => {
             </li>
             <li>
               <a
-                href="#weddings"
+                href="../WeddingPage"
                 className={`block transition ${pageTheme == "black" ? "hover:text-white" : "hover:text-yellow-500"} hover:pl-2`}
               >
                 Weddings
@@ -257,7 +260,7 @@ const WhFooter = ({ pageTheme = "black" }) => {
             </li>
             <li>
               <a
-                href="#destinations"
+                href="../WeddingPage"
                 className={`block transition ${pageTheme == "black" ? "hover:text-white" : "hover:text-yellow-500"} hover:pl-2`}
               >
                 Destinations
@@ -265,7 +268,7 @@ const WhFooter = ({ pageTheme = "black" }) => {
             </li>
             <li>
               <a
-                href="#blogs"
+                href="/blogs"
                 className={`block transition ${pageTheme == "black" ? "hover:text-white" : "hover:text-yellow-500"} hover:pl-2`}
               >
                 Blogs
@@ -273,20 +276,20 @@ const WhFooter = ({ pageTheme = "black" }) => {
             </li>
             <li>
               <a
-                href="#faqs"
+                href="../blogs"
                 className={`block transition ${pageTheme == "black" ? "hover:text-white" : "hover:text-yellow-500"} hover:pl-2`}
               >
                 FAQs
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
-                href="#community"
+                href="#comm"
                 className={`block transition ${pageTheme == "black" ? "hover:text-white" : "hover:text-yellow-500"} hover:pl-2`}
               >
                 Community
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -368,7 +371,7 @@ const WhFooter = ({ pageTheme = "black" }) => {
           >
             We create unforgettable wedding experiences with attention to every
             detail. Our team of passionate event planners ensures your special
-            day is exactly as you've always dreamed.
+            day is exactly as you have always dreamed.
           </p>
           <div className="flex space-x-4">
             <a

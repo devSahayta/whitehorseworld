@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { FaDiamond } from "react-icons/fa6";
 import { Divider } from "rsuite";
+// import PropTypes from "prop-types";
 
 const Testimonials = () => {
   // Array of video links for testimonials
@@ -71,4 +72,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Testimonials();
