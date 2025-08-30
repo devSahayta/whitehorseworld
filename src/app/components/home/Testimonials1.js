@@ -5,28 +5,28 @@ import { FaStar } from "react-icons/fa";
 export default function Testimonials1() {
   const testimonials = [
     {
-      name: "John Deo",
-      role: "Happy Client",
+      name: "Santosh Kumar",
+      // role: "Happy Client",
       image: "https://randomuser.me/api/portraits/men/32.jpg",
-      text: "It was a great experience and delivered an excellent job. Good communication all round. Quality work and many revisions available, he will guarantee your satisfaction. Thank you!",
+      text: "We had a very good experience with White Horse Event management. Their planning, design and execution was excellent. We will recommend it highly to all.The Decorations were absolutely stunning—everything was beautifully arranged, from the table settings to the floral displays. The attention to detail was impeccable, and the ambiance your team created set the perfect tone for the event.",
     },
     {
-      name: "Mick Deo",
-      role: "Business Owner",
+      name: "Bhavesh Arya",
+      // role: "Business Owner",
       image: "https://randomuser.me/api/portraits/men/45.jpg",
-      text: "Amazing professionalism and creativity. The project was handled with precision and delivered on time. Highly recommended!",
+      text: "We came to know about white horse and decided to meet them for a wedding in our family . From the very beginning they were realistic and they knew their job well . From decor to entertainment everything was exceptional and as per our requirement. It was a 3 months intensive planning and numerous calls , thank you taranbir for the patience and the wonderful wedding .",
     },
     {
-      name: "Kavin Joe",
-      role: "Wedding Planner",
+      name: "Kaushal Omar",
+      // role: "Wedding Planner",
       image: "https://randomuser.me/api/portraits/men/20.jpg",
-      text: "Great work and wonderful designs. I loved the attention to detail and the smooth communication throughout.",
+      text: "We wanted to take a moment to share our sincere gratitude for the exceptional event management and decoration services provided by your team, White Horse Event Management for our Wedding celebrations. From the start, the planning process was seamless, and it was clear that your team was dedicated to bringing our vision to life.The decorations were absolutely stunning—everything was beautifully arranged, from the table settings to the floral displays. ",
     },
     {
-      name: "Sarah Lee",
-      role: "Event Manager",
+      name: "Srishti Rastogi",
+      // role: "Event Manager",
       image: "https://randomuser.me/api/portraits/women/65.jpg",
-      text: "Truly exceeded expectations! Creative, reliable, and dedicated. Will definitely work again in the future.",
+      text: "Such a lovely experience! One meeting and they could tell exactly what we wanted..took the stress out of the wedding celebration arrangements in an instant. We knew we’ll get more than what we want and how we want the work to be done! Such a delight and the day of the event, was in awe of the arrangement. Very thoughtful team and very proactive! Couldn’t recommend more!.",
     },
   ];
 

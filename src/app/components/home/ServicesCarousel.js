@@ -9,48 +9,211 @@ const slides = [
   {
     id: 1,
     img: "/images/work/work-government-event.jpg",
-    title: "Government Events",
+    title: "",
   },
   {
     id: 2,
     img: "/images/work/work-corporate-event.jpg",
-    title: "Corporate Events",
+    title: "",
   },
-  { id: 3, img: "/images/work/work-sports.jpg", title: "Sports Events" },
+  { id: 3, img: "/images/work/work-sports.jpg", title: "" },
   {
     id: 4,
     img: "/images/work/work-artist-management.png",
-    title: "Artist Management",
+    title: "",
   },
   {
     id: 5,
     img: "/images/work/work-exhibition-fair.jpg",
-    title: "Exhibition & Fairs",
+    title: "",
   },
   {
     id: 6,
     img: "/images/work/work-international-events.jpg",
-    title: "International Acts",
+    title: "",
   },
   {
     id: 7,
-    img: "/images/work/work-database-management.jpg",
-    title: "Database & Response Mgmt",
+    img: "/images/s/s1.jpg",
+    title: "",
   },
+
   {
     id: 8,
-    img: "/images/events/slider3.jpg",
-    title: "Brand Activation & Marketing",
+    img: "/images/s/s1.png",
+    title: "",
   },
+
   {
     id: 9,
-    img: "/images/work/work-SOCIAL-NETWORKING-02-655x545.jpg",
-    title: "Digital Marketing",
+    img: "/images/s/s2.jpg",
+    title: "",
   },
+
   {
     id: 10,
-    img: "/images/work/work-theme1-655x545.jpg",
-    title: "Theme Installations",
+    img: "/images/s/s2.png",
+    title: "",
+  },
+
+  {
+    id: 11,
+    img: "/images/s/s3.jpg",
+    title: "",
+  },
+
+  {
+    id: 12,
+    img: "/images/s/s3.png",
+    title: "",
+  },
+
+  {
+    id: 13,
+    img: "/images/s/s4.jpg",
+    title: "",
+  },
+
+  {
+    id: 14,
+    img: "/images/s/s4.jpg",
+    title: "",
+  },
+  {
+    id: 15,
+    img: "/images/s/s5.jpg",
+    title: "",
+  },
+  {
+    id: 16,
+    img: "/images/s/s5.png",
+    title: "",
+  },
+  {
+    id: 16,
+    img: "/images/s/s6.png",
+    title: "",
+  },
+  {
+    id: 17,
+    img: "/images/s/s7.png",
+    title: "",
+  },
+  {
+    id: 18,
+    img: "/images/s/s8.png",
+    title: "",
+  },
+  {
+    id: 19,
+    img: "/images/s/s9.png",
+    title: "",
+  },
+  {
+    id: 20,
+    img: "/images/s/s10.png",
+    title: "",
+  },
+  {
+    id: 21,
+    img: "/images/s/s12.png",
+    title: "",
+  },
+  {
+    id: 22,
+    img: "/images/s/s13.png",
+    title: "",
+  },
+  {
+    id: 23,
+    img: "/images/s/s14.png",
+    title: "",
+  },
+  {
+    id: 24,
+    img: "/images/s/s15.png",
+    title: "",
+  },
+  {
+    id: 25,
+    img: "/images/s/s16.png",
+    title: "",
+  },
+  {
+    id: 26,
+    img: "/images/s/s17.png",
+    title: "",
+  },
+  {
+    id: 27,
+    img: "/images/s/s18.png",
+    title: "",
+  },
+  {
+    id: 28,
+    img: "/images/s/s19.png",
+    title: "",
+  },
+
+  {
+    id: 29,
+    img: "/images/s/s20.png",
+    title: "",
+  },
+  {
+    id: 30,
+    img: "/images/s/s21.png",
+    title: "",
+  },
+  {
+    id: 31,
+    img: "/images/s/s22.png",
+    title: "",
+  },
+  {
+    id: 32,
+    img: "/images/s/s23.png",
+    title: "",
+  },
+  {
+    id: 33,
+    img: "/images/s/s24.png",
+    title: "",
+  },
+  {
+    id: 34,
+    img: "/images/s/s25.png",
+    title: "",
+  },
+  {
+    id: 35,
+    img: "/images/s/s26.png",
+    title: "",
+  },
+  {
+    id: 36,
+    img: "/images/s/s27.png",
+    title: "",
+  },
+  {
+    id: 37,
+    img: "/images/s/s28.png",
+    title: "",
+  },
+  {
+    id: 38,
+    img: "/images/s/s29.png",
+    title: "",
+  },
+  {
+    id: 39,
+    img: "/images/s/s30.png",
+    title: "",
+  },
+  {
+    id: 40,
+    img: "/images/s/s31.png",
+    title: "",
   },
 ];
 
@@ -58,11 +221,11 @@ export default function ServicesCarousel() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     slidesToShow: 5, // ✅ 4-5 images in a row
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 1000,
     responsive: [
       {
         breakpoint: 1280, // Large screens
@@ -84,7 +247,7 @@ export default function ServicesCarousel() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-      className="max-w-[1400px] mx-auto px-6 py-12"
+      className="max-w-[1400px] mx-auto px-6 py-6"
     >
       <Slider {...settings}>
         {slides.map((slide) => (

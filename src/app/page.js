@@ -23,6 +23,7 @@ import ScrollPage from "./components/ScrollPage";
 import ServicesCarousel from "./components/home/ServicesCarousel";
 // import Testimonials from "./components/home/Testimonials";
 import Testimonials1 from "./components/home/Testimonials1";
+import HomeBanner from "./components/home/HomeBanner";
 
 // import HomeAppoinment from ".AppointmentSection ";
 // import AppointmentSection from "./components/home/AppointmentSection";
@@ -122,19 +123,18 @@ export default function Home() {
 
           {/* More page content */}
         </div>
-        {PromoBanner()}
 
         {/*  Service at home */}
 
         <div className=" home-i-carousel-cont">
-          <div className=" text-center py-14 ">
+          <div className=" text-center py-10 ">
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
               className=" text-5xl md:text-4xl font-bold text-yellow-400 mb-2 "
             >
-              Our Services
+              Our Latest Work
             </motion.h2>
             <motion.h5
               initial={{ opacity: 0, y: 50 }}
@@ -149,8 +149,8 @@ export default function Home() {
               style={{
                 width: "25%",
                 margin: "auto",
-                marginBottom: "56px",
-                marginTop: "25px",
+                marginBottom: "2px",
+                marginTop: "10px",
               }}
             >
               <FaDiamond size={10} />{" "}
@@ -163,6 +163,9 @@ export default function Home() {
         </div>
 
         {/* Contact CTA */}
+        {PromoBanner()}
+
+        {HomeBanner()}
 
         <section
           className=" w-full py-32 px-7 text-center overflow-hidden "
