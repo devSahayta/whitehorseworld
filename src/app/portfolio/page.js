@@ -22,6 +22,7 @@
 "use client";
 import { motion } from "framer-motion";
 import WhHeader from "../components/WhHeader";
+import WhFooter from "../components/WhFooter";
 
 const projects = [
   {
@@ -136,6 +137,8 @@ export default function PortfolioTimeline() {
           ))}
         </div>
       </section>
+
+      <WhFooter />
     </>
   );
 }
