@@ -285,9 +285,9 @@ const originalImages = [
   { src: "/images/gallery/2.png", caption: "ARTIST MANAGEMENT" },
   { src: "/images/gallery/8.png", caption: "INTERNATIONAL ACTS" },
   { src: "/images/gallery/gallery1.jpg", caption: "DESTINATION WEDDINGS" },
-  { src: "/images/gallery/01.jpg", caption: "EVENTS PLANNING" },
-  { src: "/images/gallery/_DSC2560.jpg", caption: "EXHIBITION & FAIRS" },
-  { src: "/images/gallery/12.jpg", caption: "WEDDING PLANNING" },
+  { src: "/images/gallery/01.JPG", caption: "EVENTS PLANNING" },
+  { src: "/images/gallery/10.JPG", caption: "EXHIBITION & FAIRS" },
+  { src: "/images/gallery/12.JPG", caption: "WEDDING PLANNING" },
 ];
 
 export default function WGallerySection2() {

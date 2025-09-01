@@ -209,7 +209,7 @@ export default function WeddingPage() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Wedding Types Section */}
         <SectionHeader
-          title="Wedding Types"
+          title="Wedding Genres"
           subtitle="Choose from our signature wedding styles crafted to perfection"
         />
 
