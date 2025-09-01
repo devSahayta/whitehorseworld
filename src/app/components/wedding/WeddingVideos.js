@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 
 const weddingVideos = [
   {
-    src: "/videos/4.mp4",
+    src: "/videos/New.mp4",
     title: "Royal Wedding Highlights",
   },
   {
-    src: "/videos/2.mp4",
+    src: "/videos/New1.mp4",
     title: "Beach Destination Wedding",
   },
   {
-    src: "/videos/3.mp4",
+    src: "/videos/4.mp4",
     title: "Luxury Palace Wedding",
   },
 
   {
-    src: "/videos/01.mp4",
+    src: "/videos/2.mp4",
     title: "Luxury Palace Wedding",
   },
   {

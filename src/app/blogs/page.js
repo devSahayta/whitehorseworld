@@ -26,7 +26,7 @@ const blogs = [
     id: 3,
     title: "Sports Event Management",
     desc: "Our sports events are adrenaline-packed with world-class organization.",
-    img: "https://source.unsplash.com/800x600/?sports,stadium",
+    img: "/images/banner-collage.png",
   },
   {
     id: 4,

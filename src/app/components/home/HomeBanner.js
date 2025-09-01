@@ -64,14 +64,14 @@ export default function HomeBanner() {
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
         className="absolute bottom-5 text-center z-20 px-4"
       >
-        <h1 className="text-2xl md:text-4xl font-extrabold text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]">
+        <h1 className="text-1xl md:text-2xl font-extrabold text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]">
           Make Your Events Unforgettable ✨
         </h1>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
-          className="mt-4 text-xl md:text-2xl text-gray-300"
+          className="mt-4 text-xl md:text-1xl text-gray-300"
         >
           Weddings · Concerts · Corporate · Festivals
         </motion.p>
