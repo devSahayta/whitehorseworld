@@ -126,40 +126,48 @@ export default function Home() {
 
         {/*  Service at home */}
 
-        <div className=" home-i-carousel-cont">
-          <div className=" text-center py-10 ">
+        <div className="home-i-carousel-cont px-3 sm:px-6 md:px-10 lg:px-16">
+          <div className="text-center py-8 sm:py-10">
+            {/* Main Heading */}
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-              className=" text-5xl md:text-4xl font-bold text-yellow-400 mb-2 "
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-yellow-400 mb-3 leading-snug"
             >
               Our Latest Work
             </motion.h2>
+
+            {/* Subheading */}
             <motion.h5
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+              className="text-sm sm:text-base md:text-lg text-black max-w-3xl mx-auto px-2"
             >
               Explore the visuals that reflect our dedication to creating
               unforgettable events
             </motion.h5>
+
+            {/* Divider */}
             <Divider
-              className=" w-about-divider text-yellow-400 "
+              className="w-about-divider text-yellow-400"
               style={{
                 width: "25%",
-                margin: "auto",
-                marginBottom: "2px",
-                marginTop: "10px",
+                minWidth: "120px",
+                margin: "10px auto 8px auto",
               }}
             >
-              <FaDiamond size={10} />{" "}
-              <FaDiamond size={20} className=" ml-1 mr-1 " />
+              <FaDiamond size={10} />
+              <FaDiamond size={20} className="ml-1 mr-1" />
               <FaDiamond size={10} />
             </Divider>
           </div>
 
-          {ServicesCarousel()}
+          {/* Carousel */}
+          <div className="mt-4 sm:mt-6 md:mt-8">
+            <ServicesCarousel />
+          </div>
         </div>
 
         {/* Contact CTA */}

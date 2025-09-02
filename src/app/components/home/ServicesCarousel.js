@@ -1,3 +1,4 @@
+"use client";
 import Slider from "react-slick";
 import Image from "next/image"; // ✅ Next.js optimized images
 import "slick-carousel/slick/slick.css";
@@ -12,7 +13,7 @@ const slides = [
   { id: 4, img: "/images/work/work-artist-management.png", title: "" },
   { id: 5, img: "/images/work/work-exhibition-fair.jpg", title: "" },
   { id: 6, img: "/images/work/work-international-events.jpg", title: "" },
-  { id: 7, img: "/images/s/s1.jpg", title: "" },
+  { id: 7, img: "/images/s/s18.png", title: "" },
   { id: 8, img: "/images/s/s1.png", title: "" },
   { id: 9, img: "/images/s/s2.jpg", title: "" },
   { id: 10, img: "/images/s/s2.png", title: "" },
@@ -52,32 +53,17 @@ export default function ServicesCarousel() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1200,
+    speed: 1000,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     responsive: [
-      {
-        breakpoint: 1536, // 2XL
-        settings: { slidesToShow: 5 },
-      },
-      {
-        breakpoint: 1280, // XL
-        settings: { slidesToShow: 4 },
-      },
-      {
-        breakpoint: 1024, // LG
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 768, // MD
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 640, // SM
-        settings: { slidesToShow: 1 },
-      },
+      { breakpoint: 1536, settings: { slidesToShow: 5 } }, // 2XL
+      { breakpoint: 1280, settings: { slidesToShow: 4 } }, // XL
+      { breakpoint: 1024, settings: { slidesToShow: 3 } }, // Laptop
+      { breakpoint: 768, settings: { slidesToShow: 2 } }, // Tablet
+      { breakpoint: 700, settings: { slidesToShow: 6 } }, // Mobile
     ],
   };
 
@@ -85,8 +71,8 @@ export default function ServicesCarousel() {
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-      className="max-w-[1600px] mx-auto px-2 sm:px-4 md:px-6 py-6"
+      transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+      className="w-full max-w-[1600px] mx-auto px-2 sm:px-4 md:px-6 py-6"
     >
       <Slider {...settings}>
         {slides.map((slide) => (
@@ -96,19 +82,24 @@ export default function ServicesCarousel() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+              className="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer"
             >
               {/* Image */}
-              <Image
-                src={slide.img}
-                alt={slide.title || "Event Image"}
-                width={600}
-                height={400}
-                className="object-cover w-full h-[180px] sm:h-[260px] md:h-[300px] lg:h-[290px] xl:h-[380px] 2xl:h-[380px] transition-transform duration-500 group-hover:scale-110"
-              />
+              <div className="relative w-full aspect-[4/3] sm:aspect-[3/2] md:aspect-[16/9] lg:aspect-[5/3]">
+                <Image
+                  src={slide.img}
+                  alt={slide.title || "Event Image"}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw,
+                         (max-width: 1024px) 50vw,
+                         (max-width: 1280px) 33vw,
+                         20vw"
+                />
+              </div>
 
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition duration-500"></div>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition duration-500"></div>
 
               {/* Caption */}
               {slide.title && (
@@ -117,7 +108,7 @@ export default function ServicesCarousel() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="text-white text-base sm:text-lg md:text-xl font-bold text-center px-2"
+                    className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-center px-2"
                   >
                     {slide.title}
                   </motion.h3>

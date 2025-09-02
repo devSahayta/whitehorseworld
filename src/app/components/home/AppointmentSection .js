@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 
 const AppointmentSection = () => {
   useEffect(() => {
-    // GSAP animation for the section
+    // Floating animation for entire section
     gsap.to(".appointment-section", {
       x: 20,
       duration: 3,
@@ -12,7 +12,7 @@ const AppointmentSection = () => {
       ease: "power1.inOut",
     });
 
-    // Add floating elements animation
+    // Floating icons animation
     const floatingElements = document.querySelectorAll(".floating-element");
     floatingElements.forEach((el, index) => {
       gsap.to(el, {
@@ -29,6 +29,7 @@ const AppointmentSection = () => {
   return (
     <section className="appointment-container">
       <div className="appointment-section">
+        {/* Floating decorative elements */}
         <div className="floating-elements">
           <div className="floating-element" style={{ top: "20%", left: "5%" }}>
             ✦
@@ -44,6 +45,7 @@ const AppointmentSection = () => {
           </div>
         </div>
 
+        {/* Main Content */}
         <div className="appointment-content">
           <div className="text-content">
             <div className="icon">
@@ -69,7 +71,7 @@ const AppointmentSection = () => {
       <style jsx>{`
         .appointment-container {
           width: 100%;
-          padding: 40px 20px;
+          padding: 30px 15px;
           background: linear-gradient(
             135deg,
             #1a2a6c 0%,
@@ -84,47 +86,55 @@ const AppointmentSection = () => {
 
         .appointment-section {
           background: linear-gradient(90deg, #ff6b6b 0%, #ff8e53 100%);
-          height: 100px;
           width: 100%;
-          max-width: 1200px;
+          max-width: 1100px;
           border-radius: 12px;
           display: flex;
           align-items: center;
-          justify-content: center;
-          overflow: hidden;
+          justify-content: space-between;
           position: relative;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          overflow: hidden;
+          padding: 20px 25px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+          flex-wrap: wrap;
+          gap: 20px;
         }
 
         .appointment-content {
           display: flex;
+          flex: 1;
           align-items: center;
           justify-content: space-between;
-          width: 90%;
-          max-width: 1000px;
+          flex-wrap: wrap;
+          gap: 20px;
           z-index: 2;
         }
 
         .text-content {
           display: flex;
           align-items: center;
+          gap: 15px;
+          flex: 1;
+          min-width: 250px;
         }
 
         .icon {
-          font-size: 2.5rem;
-          margin-right: 20px;
-          color: white;
+          font-size: 2rem;
           animation: pulse 2s infinite;
+          color: white;
         }
 
+        /* ✅ Responsive message */
         .message {
-          font-size: 1.8rem;
+          font-size: clamp(1rem, 2vw + 0.5rem, 1.8rem);
           font-weight: 700;
           color: white;
+          line-height: 1.4;
+          text-align: left;
         }
 
         .discount {
-          font-size: 2.2rem;
+          font-size: clamp(1.2rem, 2.5vw + 0.5rem, 2rem);
           font-weight: 800;
           color: #4a0e0e;
           text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
@@ -136,7 +146,7 @@ const AppointmentSection = () => {
           border: none;
           padding: 12px 25px;
           border-radius: 50px;
-          font-size: 1.2rem;
+          font-size: clamp(0.9rem, 1.5vw, 1.1rem);
           font-weight: 600;
           cursor: pointer;
           display: flex;
@@ -144,6 +154,7 @@ const AppointmentSection = () => {
           transition: all 0.3s ease;
           box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
           text-decoration: none;
+          white-space: nowrap;
         }
 
         .whatsapp-btn:hover {
@@ -153,8 +164,8 @@ const AppointmentSection = () => {
         }
 
         .whatsapp-btn i {
-          margin-right: 10px;
-          font-size: 1.5rem;
+          margin-right: 8px;
+          font-size: 1.4rem;
         }
 
         .floating-elements {
@@ -168,7 +179,7 @@ const AppointmentSection = () => {
 
         .floating-element {
           position: absolute;
-          color: rgba(255, 255, 255, 0.15);
+          color: rgba(255, 255, 255, 0.2);
           font-size: 2rem;
         }
 
@@ -184,28 +195,31 @@ const AppointmentSection = () => {
           }
         }
 
+        /* ✅ Extra fine-tuned responsiveness */
         @media (max-width: 768px) {
-          .appointment-content {
-            flex-direction: column;
-            text-align: center;
-            padding: 15px;
-          }
-
-          .appointment-section {
-            height: auto;
-            padding: 20px 0;
-          }
-
-          .text-content {
-            margin-bottom: 15px;
-          }
-
           .message {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
+            text-align: center;
           }
-
           .discount {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
+          }
+          .text-content {
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .message {
+            font-size: 1rem;
+          }
+          .discount {
+            font-size: 1.2rem;
+          }
+          .whatsapp-btn {
+            width: 100%;
+            justify-content: center;
           }
         }
       `}</style>
