@@ -145,8 +145,7 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
               className="text-sm sm:text-base md:text-lg text-black max-w-3xl mx-auto px-2"
             >
-              Explore the visuals that reflect our dedication to creating
-              unforgettable events
+              Experience visuals that make events unforgettable.
             </motion.h5>
 
             {/* Divider */}
