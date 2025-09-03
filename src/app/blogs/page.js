@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-// import Testimonials from "../components/home/Testimonials";
+import Link from "next/link";
 import FAQSection from "../components/FAQSection";
 import { FaDiamond } from "react-icons/fa6";
 import { Divider } from "rsuite";
@@ -74,53 +74,81 @@ export default function BlogPage() {
         </Divider>
 
         {/* Blog Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {blogs.map((blog, i) => (
-            <motion.div
-              key={blog.id}
-              initial={{ opacity: 0, y: -100 }} // start from top
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8, // smooth 40% slower
-                ease: "easeOut",
-                delay: i * 0.2,
-              }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 12px 30px rgba(0, 0, 0, 0.25)",
-              }}
-              className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer"
-            >
-              {/* Image */}
-              <div className="overflow-hidden">
-                <Image
-                  src={blog.img}
-                  alt={blog.title}
-                  width={500}
-                  height={400}
-                  className="w-full h-60 object-cover transition-transform duration-500 hover:scale-110"
+        <a href="../Blog1">
+          <div className="grid md:grid-cols-3 gap-8">
+            {blogs.map((blog, i) => (
+              <motion.div
+                key={blog.id}
+                initial={{ opacity: 0, y: -100 }} // start from top
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                  delay: i * 0.2,
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 12px 30px rgba(0, 0, 0, 0.25)",
+                }}
+                className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer"
+              >
+                {/* Image */}
+                <div className="overflow-hidden">
+                  <Image
+                    src={blog.img}
+                    alt={blog.title}
+                    width={500}
+                    height={400}
+                    className="w-full h-60 object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+
+                {/* Text Content */}
+                <div className="p-6">
+                  <h2 className="text-2xl font-semibold mb-2 text-gray-800">
+                    {blog.title}
+                  </h2>
+                  <p className="text-gray-600">{blog.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* See More Button */}
+          <div className="flex justify-center mt-12">
+            <Link href="../Blog1">
+              <motion.button
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: "0px 0px 25px rgba(255, 215, 0, 0.8)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="relative px-10 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-pink-500 text-black font-bold text-lg tracking-wide shadow-lg overflow-hidden"
+              >
+                <span className="relative z-10">See More</span>
+                {/* Shimmer effect */}
+                <motion.span
+                  className="absolute inset-0 bg-white/30"
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "100%" }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 2,
+                    ease: "linear",
+                  }}
                 />
-              </div>
-
-              {/* Text Content */}
-              <div className="p-6">
-                <h2 className="text-2xl font-semibold mb-2 text-gray-800">
-                  {blog.title}
-                </h2>
-                <p className="text-gray-600">{blog.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Testimonials Section */}
-        {/* <div>{Testimonials1() pageTheme="black"}</div> */}
-
-        <>{}</>
+              </motion.button>
+            </Link>
+          </div>
+        </a>
 
         {/* FAQs Section */}
-        <>{FAQSection()}</>
       </section>
+      <>
+        {Testimonials1()}
+
+        {FAQSection()}
+      </>
 
       <WhFooter />
     </>

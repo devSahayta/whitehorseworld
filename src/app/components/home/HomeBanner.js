@@ -44,32 +44,33 @@ export default function HomeBanner() {
       >
         A glimpse into our unforgettable events
       </motion.h5>
-
-      {/* Instagram-style grid */}
-      <div className="grid grid-cols-3 gap-3 sm:gap-4 max-w-6xl mx-auto">
-        {images.map((src, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="relative overflow-hidden rounded-xl shadow-md group"
-          >
-            <img
-              src={src}
-              alt={`Gallery ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
-            {/* Overlay effect on hover */}
+      <a href="../portfolio">
+        {/* Instagram-style grid */}
+        <div className="grid grid-cols-3 gap-3 sm:gap-4 max-w-6xl mx-auto">
+          {images.map((src, index) => (
             <motion.div
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 1 }}
-              className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-lg font-semibold"
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 200 }}
+              className="relative overflow-hidden rounded-xl shadow-md group"
             >
-              ❤️ 120 · 💬 15
+              <img
+                src={src}
+                alt={`Gallery ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+              {/* Overlay effect on hover */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-lg font-semibold"
+              >
+                ❤️ 120 · 💬 15
+              </motion.div>
             </motion.div>
-          </motion.div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </a>
     </section>
   );
 }
