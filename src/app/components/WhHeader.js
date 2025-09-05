@@ -107,7 +107,7 @@ const WhHeader = ({ pageTheme = "black" }) => {
             >
               Wedding
             </motion.a>
-            <motion.a
+            {/* <motion.a
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
@@ -115,7 +115,7 @@ const WhHeader = ({ pageTheme = "black" }) => {
               className=" h-link "
             >
               Portfolio
-            </motion.a>
+            </motion.a> */}
             <motion.a
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ const WhHeader = ({ pageTheme = "black" }) => {
               href="/blogs"
               className=" h-link "
             >
-              Resources
+              Blogs
             </motion.a>
             <motion.a
               initial={{ opacity: 0, y: 50 }}
@@ -166,12 +166,12 @@ const WhHeader = ({ pageTheme = "black" }) => {
             >
               Wedding
             </a>
-            <a
+            {/* <a
               href="/portfolio"
               className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
             >
               Portfolio
-            </a>
+            </a> */}
             <a
             // href="/taran-signature-wedding"
             // className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
@@ -182,7 +182,7 @@ const WhHeader = ({ pageTheme = "black" }) => {
               href="/blogs"
               className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
             >
-              Resources
+              Blogs
             </a>
             <a
               href="/contact"

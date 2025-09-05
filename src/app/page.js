@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import { MochiiWidget } from "@mochii-ai/widget";
 
 import "./styles/wedding.css";
 // import HeroSection from "./components/wedding/HeroSection";
@@ -27,6 +28,9 @@ import HomeBanner from "./components/home/HomeBanner";
 
 // import HomeAppoinment from ".AppointmentSection ";
 // import AppointmentSection from "./components/home/AppointmentSection";
+export function ChatWidget() {
+  return <MochiiWidget apiKey="mc_34421a47588b4392a39f05c0244acfc4" />;
+}
 
 export default function Home() {
   return (
@@ -187,6 +191,12 @@ export default function Home() {
           <a href="/contact" className="book-consultation-button">
             Book a Consultation
           </a>
+          {/* <script src="https://www.mochii.ai/widget.js"></script>
+<script>
+  new MochiiWidget({
+    apiKey: "mc_34421a47588b4392a39f05c0244acfc4"
+  });
+</script> */}
         </section>
         {/* <Testimonials1 /> */}
 

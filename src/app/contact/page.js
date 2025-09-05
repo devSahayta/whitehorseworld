@@ -110,11 +110,11 @@ export default function ContactUsPage() {
             <h3 className="text-lg font-semibold mb-1">Our Contact Info</h3>
             <p className="text-gray-400">
               <a href="tel:0651-2332534" className=" hover:text-yellow-400 ">
-                0651-2332534
+                0651-2999931
               </a>{" "}
               /{" "}
               <a href="tel:+91-94315 81052" className=" hover:text-yellow-400 ">
-                +91-94315 81052
+                +91-7050573555
               </a>
               <br />
               <a

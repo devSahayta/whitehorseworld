@@ -198,15 +198,18 @@ import { Divider } from "rsuite";
 import { FaDiamond } from "react-icons/fa6";
 import WhHeader from "../components/WhHeader";
 import WhFooter from "../components/WhFooter";
-import WGallerySection from "../components/wedding/WGallerySection";
-import VideoGallery from "../components/wedding/VideoGallery";
-import WeddingVideos from "../components/wedding/WeddingVideos";
+// import WGallerySection from "../components/wedding/WGallerySection";
+// import VideoGallery from "../components/wedding/VideoGallery";
+// import WeddingVideos from "../components/wedding/WeddingVideos";
+import HomeBanner from "../portfolio/page";
 
 export default function WeddingPage() {
   return (
     <>
       <WhHeader />
-      <div className="max-w-7xl mx-auto px-4 py-16">
+
+      <HomeBanner />
+      <div className="relative w-full  bg-white  mx-auto px-12 py-14">
         {/* Wedding Types Section */}
         <SectionHeader
           title="Wedding Genres"
@@ -220,11 +223,11 @@ export default function WeddingPage() {
           ))}
         </div>
 
-        <VideoGallery />
+        {/* <VideoGallery /> */}
 
-        <WGallerySection />
+        {/* <WGallerySection /> */}
 
-        <WeddingVideos />
+        {/* <WeddingVideos /> */}
 
         {/* Destinations Section */}
         <SectionHeader
@@ -233,7 +236,7 @@ export default function WeddingPage() {
         />
 
         {/* Destination Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
           {destinations.map(({ title, img, hueA, hueB }, i) => (
             <Card
               i={i + 10}

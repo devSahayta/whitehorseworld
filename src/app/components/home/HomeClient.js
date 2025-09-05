@@ -8,8 +8,8 @@ import { Divider } from "rsuite";
 export default function HomeClient() {
   return (
     <section
-      className=" py-32 px-4 overflow-hidden"
-      // style={{ border: "solid 1px red" }}
+      className=" py-32 px-4 overflow-hidden bg-white "
+      style={{ border: "solid 1px black" }}
     >
       <motion.h2
         initial={{ opacity: 0, y: 50 }}
@@ -23,14 +23,14 @@ export default function HomeClient() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-        className=" text-center  mb-8 "
+        className=" text-center  mb-8 text-black"
       >
         From Global Giants to Visionary Startups — We Deliver Impact Across
         Every Collaboration
       </motion.h5>
       <Divider
         className=" w-about-divider text-yellow-400 "
-        style={{ width: "25%", margin: "auto", marginBottom: "126px" }}
+        style={{ width: "25%", margin: "auto", marginBottom: "90px" }}
       >
         <FaDiamond size={10} /> <FaDiamond size={20} className=" ml-1 mr-1 " />
         <FaDiamond size={10} />

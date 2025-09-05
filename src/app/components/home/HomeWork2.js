@@ -82,19 +82,19 @@ const workItems = [
 
 export default function HomeWork2() {
   return (
-    <section className="bg-black text-white px-4 md:px-12 py-16">
+    <section className="bg-white text-white px-4 md:px-58 py-34">
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-center text-4xl md:text-5xl font-bold mb-16 main-color "
-        style={{ marginBottom: "25px", marginTop: "100px" }}
+        style={{ marginBottom: "10px", marginTop: "40px" }}
       >
         WHITE HORSE WORLD IN ACTION
       </motion.h2>
       <motion.h5
-        className=" text-center "
-        style={{ marginBottom: "26px", marginTop: "25px" }}
+        className=" text-center  text-black "
+        style={{ marginBottom: "10px", marginTop: "20px" }}
       >
         A Glimpse into the World-Class Events and Experiences We&apos;ve Brought
         to Life
@@ -114,7 +114,7 @@ export default function HomeWork2() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             // viewport={{ once: true }}
-            className={` h-[80vh] md:h-screen w-[92%] m-auto flex flex-col md:flex-row items-center gap-10 ${
+            className={` mx-10 w-[92%] m-auto flex flex-col md:flex-row items-center gap-20    border: "solid 1px black" ${
               index % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
             // style={{
@@ -134,9 +134,9 @@ export default function HomeWork2() {
               <Image
                 src={item.image}
                 alt={item.title}
-                width={800}
-                height={400}
-                className="rounded-2xl shadow-lg object-cover w-full"
+                width={200}
+                height={100}
+                className="rounded-3xl shadow-lg object-cover  mx-0 my-0 w-full"
               />
             </motion.div>
             <motion.div
@@ -148,7 +148,7 @@ export default function HomeWork2() {
               <h2 className="text-2xl md:text-4xl font-bold text-yellow-400 mb-6 ">
                 {item.title}
               </h2>
-              <p className="text-lg text-gray-300">{item.description}</p>
+              <p className="text-lg text-black">{item.description}</p>
             </motion.div>
           </motion.div>
         ))}

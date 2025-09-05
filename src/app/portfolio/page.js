@@ -164,7 +164,7 @@ const images = [
   "/images/p2.JPG",
   "/images/p3.JPG",
   "/images/p4.JPG",
-  "/images/p19.JPG",
+  "/images/p19.jpg",
   "/images/p6.JPG",
   "/images/p7.JPG",
   "/images/p8.JPG",
@@ -181,42 +181,42 @@ const images = [
   "/images/p19.jpg",
   "/images/p20.jpg",
   "/images/p21.jpg",
-  "/images/p22.jpg",
-  "/images/p23.JPG",
-  "/images/p24.jpg",
-  "/images/p25.jpg",
-  "/images/p26.jpg",
-  "/images/p27.jpg",
-  "/images/p28.jpg",
-  "/images/p29.jpg",
-  "/images/p30.jpg",
-  "/images/p31.jpg",
-  "/images/p32.jpg",
-  "/images/p33.jpg",
+  // "/images/p22.jpg",
+  // "/images/p23.jpg",
+  // "/images/p24.jpg",
+  // "/images/p25.jpg",
+  // "/images/p26.jpg",
+  // "/images/p27.jpg",
+  // "/images/p28.jpg",
+  // "/images/p29.jpg",
+  // "/images/p30.jpg",
+  // "/images/p31.jpg",
+  // "/images/p32.jpg",
+  // "/images/p33.jpg",
 
-  "/images/p34.jpg",
-  "/images/p35.jpg",
-  "/images/p36.jpg",
-  "/images/p37.jpg",
-  "/images/p38.jpg",
-  "/images/p39.jpg",
+  // "/images/p34.jpg",
+  // "/images/p35.jpg",
+  // "/images/p36.jpg",
+  // "/images/p37.jpg",
+  // "/images/p38.jpg",
+  // "/images/p39.jpg",
 ];
 
 export default function HomeBanner() {
   return (
     <>
-      <WhHeader />
+      {/* <WhHeader /> */}
 
       <section className="relative w-full min-h-screen bg-white px-4 py-10">
         <div className="flex items-center mb-16">
-          <motion.div
+          {/* <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: "200px" }}
             transition={{ duration: 1 }}
             className="h-12 bg-red-800 rounded-r-full flex items-center"
           >
             <h2 className="text-3xl text-white font-bold ml-6">Portfolio.</h2>
-          </motion.div>
+          </motion.div> */}
           {/* <span className="ml-4 text-lg tracking-widest h-9 bg-red-800  ">
             {" "}
             Of WhiteHorse
@@ -283,7 +283,7 @@ export default function HomeBanner() {
         </div>
       </section>
 
-      <WhFooter />
+      {/* <WhFooter /> */}
     </>
   );
 }

@@ -61,7 +61,7 @@ export default function WorkPage() {
 
       <HomeClient />
 
-      <div className=" home-i-carousel-cont">
+      <div className=" home-i-carousel-cont bg-white mb-0 ">
         <div className=" text-center py-14 ">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
@@ -75,6 +75,7 @@ export default function WorkPage() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+            className="text-black"
           >
             Explore the visuals that reflect our dedication to creating
             unforgettable events

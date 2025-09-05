@@ -74,7 +74,7 @@ export default function BlogPage() {
         </Divider>
 
         {/* Blog Grid */}
-        <a href="../Blog1">
+        <Link href="../Blog1">
           <div className="grid md:grid-cols-3 gap-8">
             {blogs.map((blog, i) => (
               <motion.div
@@ -113,34 +113,34 @@ export default function BlogPage() {
               </motion.div>
             ))}
           </div>
+        </Link>
 
-          {/* See More Button */}
-          <div className="flex justify-center mt-12">
-            <Link href="../Blog1">
-              <motion.button
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: "0px 0px 25px rgba(255, 215, 0, 0.8)",
+        {/* See More Button */}
+        <div className="flex justify-center mt-12">
+          <Link href="/Blog1">
+            <motion.button
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0px 0px 25px rgba(255, 215, 0, 0.8)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="relative px-10 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-pink-500 text-black font-bold text-lg tracking-wide shadow-lg overflow-hidden"
+            >
+              <span className="relative z-10">See More</span>
+              {/* Shimmer effect */}
+              <motion.span
+                className="absolute inset-0 bg-white/30"
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  ease: "linear",
                 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative px-10 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-pink-500 text-black font-bold text-lg tracking-wide shadow-lg overflow-hidden"
-              >
-                <span className="relative z-10">See More</span>
-                {/* Shimmer effect */}
-                <motion.span
-                  className="absolute inset-0 bg-white/30"
-                  initial={{ x: "-100%" }}
-                  animate={{ x: "100%" }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 2,
-                    ease: "linear",
-                  }}
-                />
-              </motion.button>
-            </Link>
-          </div>
-        </a>
+              />
+            </motion.button>
+          </Link>
+        </div>
 
         {/* FAQs Section */}
       </section>
