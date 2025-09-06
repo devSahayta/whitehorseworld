@@ -277,6 +277,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Modal } from "rsuite";
+import Image from "next/image";
 
 const originalImages = [
   { src: "/images/gallery/5.jpg", caption: "GOVERNMENT EVENTS" },
@@ -336,15 +337,20 @@ export default function WGallerySection2() {
             <div>
               {[...images, ...images].map((img, i) => (
                 <div
-                  key={i}
+                  key={`${col}-${i}`}
                   className="relative cursor-pointer border border-black"
                   onClick={() => handleOpen(img.src)}
                 >
-                  <img
+                  {/* ✅ Next.js Image (Lazy-loaded + Optimized) */}
+                  <Image
                     src={img.src}
-                    alt={`Gallery ${i}`}
-                    className="w-full object-cover"
+                    alt={img.caption}
+                    width={500}
+                    height={500}
+                    loading="lazy"
+                    className="w-full h-auto object-cover"
                   />
+
                   {/* Caption overlay */}
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                     <p className="text-white text-sm sm:text-base md:text-lg font-bold text-center px-2">
@@ -361,10 +367,13 @@ export default function WGallerySection2() {
       {/* Modal Preview */}
       <Modal open={open} onClose={() => setOpen(false)} size="lg">
         <Modal.Body className="flex justify-center items-center">
-          <img
+          <Image
             src={selectedImage}
             alt="Selected"
-            className="w-full rounded-lg"
+            width={900}
+            height={600}
+            className="w-full h-auto rounded-lg"
+            priority
           />
         </Modal.Body>
       </Modal>

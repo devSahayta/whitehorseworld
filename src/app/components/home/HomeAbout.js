@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function HomeAbout() {
@@ -8,26 +8,34 @@ export default function HomeAbout() {
 
   return (
     <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-      {/* Fallback Background Image */}
+      {/* ✅ Fallback Background Image (visible until video loads) */}
       <div
-        className={`absolute inset-0 w-full h-full bg-[url('/images/slides/slider3.jpg')] bg-cover bg-center z-[-1] transition-opacity duration-1000 ${videoLoaded ? "opacity-0" : "opacity-100"}`}
+        className={`absolute inset-0 w-full h-full bg-[url('/images/slides/slider3.jpg')] bg-cover bg-center z-[-1] transition-opacity duration-1000 ${
+          videoLoaded ? "opacity-0" : "opacity-100"
+        }`}
         aria-hidden="true"
       />
 
-      {/* Video Background */}
+      {/* ✅ Optimized Video Background */}
       <video
-        className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ${videoLoaded ? "opacity-100" : "opacity-0"}`}
+        className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ${
+          videoLoaded ? "opacity-100" : "opacity-0"
+        }`}
         autoPlay
         loop
         muted
         playsInline
-        onCanPlayThrough={() => setVideoLoaded(true)}
+        preload="none" // 🚀 prevents eager loading
+        poster="/images/slides/slider3.jpg" // instant preview
+        onLoadedData={() => setVideoLoaded(true)} // fires when video is buffered
       >
+        {/* Multiple formats for better compression */}
+        <source src="/videos/whitehorseworldvideo.webm" type="video/webm" />
         <source src="/videos/whitehorseworldvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* Overlay */}
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60 backdrop-brightness-88 z-0" />
 
       {/* Animated Content */}
@@ -42,7 +50,7 @@ export default function HomeAbout() {
           <span className="italic text-yellow-400 font-ds ">(Almost)</span>{" "}
           Everything
         </h1>
-        <p className="text-lg md:text-xl text-gray-200 mb-6  home-about-para ">
+        <p className="text-lg md:text-xl text-gray-200 mb-6 home-about-para">
           We are White Horse Event Management — Go Getters, Planners, Artists,
           Creatives, and Motivators.
         </p>
