@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, px } from "framer-motion";
 
 const images = [
   "/images/1.JPG",
@@ -12,7 +12,7 @@ const images = [
 
 export default function HomeBanner() {
   return (
-    <section className="relative w-full min-h-screen bg-white px-4 py-10">
+    <section className="relative w-full  bg-white px-4 py-10">
       {/* Animated headline */}
       {/* <motion.div
         initial={{ y: 40, opacity: 0 }}
