@@ -42,7 +42,7 @@ export const metadata = {
   description: "White Horse World is Event Managment in Ranchi",
 
   icons: {
-    icon: "favicon-32x32.png", // or "/favicon.png"
+    icon: "public/favicon-32x32.png", // or "/favicon.png"
   },
 };
 
