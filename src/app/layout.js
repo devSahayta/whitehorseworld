@@ -40,6 +40,10 @@ const lato = Lato({
 export const metadata = {
   title: "White Horse World | Event Managment in Ranchi",
   description: "White Horse World is Event Managment in Ranchi",
+
+  icons: {
+    icon: "favicon-32x32.png", // or "/favicon.png"
+  },
 };
 
 export default function RootLayout({ children }) {
