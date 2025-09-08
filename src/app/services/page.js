@@ -19,7 +19,7 @@ export default function WorkPage() {
     <>
       <ScrollPage />
 
-      <WhHeader />
+      <WhHeader pageTheme="white" />
 
       {/* <div className=" home-i-carousel-cont">
             <HomeCarousel />

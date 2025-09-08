@@ -81,7 +81,7 @@ const ContactForm2 = () => {
               <h3 className=" text-2xl md:text-3xl text-pink-400 mb-4 ">
                 Plan the best day of your life with only the best
               </h3>
-              <p className=" text-gray-300 ">
+              <p className=" text-gray-600 ">
                 Fill the form below to let expert wedding planners make your
                 dream come true.
               </p>
@@ -92,15 +92,20 @@ const ContactForm2 = () => {
               onChange={setFormData}
               model={contactFormModal}
               ref={contactFormRef}
+              className="text-black"
             >
               <Form.Group controlId="name">
                 <Form.ControlLabel>Name</Form.ControlLabel>
-                <Form.Control name="name" />
+                <Form.Control
+                  name="name"
+                  className="bg-gray-700"
+                  placeholder="Name"
+                />
                 <Form.HelpText>Required</Form.HelpText>
               </Form.Group>
               <Form.Group controlId="email">
                 <Form.ControlLabel>Email</Form.ControlLabel>
-                <Form.Control name="email" type="email" />
+                <Form.Control name="email" type="email" placeholder="Email" />
                 <Form.HelpText>Required</Form.HelpText>
               </Form.Group>
               <Form.Group controlId="subject">

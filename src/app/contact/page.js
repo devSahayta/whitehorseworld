@@ -15,8 +15,8 @@ export default function ContactUsPage() {
     <>
       <ScrollPage />
 
-      <WhHeader />
-      <div className="bg-black text-white min-h-screen px-6 py-12">
+      <WhHeader pageTheme="white" />
+      <div className="bg-white text-black min-h-screen px-6 py-12">
         {/* Contact form */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -89,7 +89,9 @@ export default function ContactUsPage() {
             <div className="text-3xl mb-2">
               <IoLocationOutline className=" m-auto text-red-500 " />
             </div>
-            <h3 className="text-lg font-semibold mb-1">Our Address</h3>
+            <h3 className="text-lg font-semibold mb-1 text-white">
+              Our Address
+            </h3>
             <p className="text-gray-400">
               Ground Floor, Sahni Apt, PP Compound, 4,
               <br />
@@ -107,7 +109,9 @@ export default function ContactUsPage() {
             <div className="text-3xl mb-2 ">
               <IoCallOutline className=" m-auto text-green-500 " />
             </div>
-            <h3 className="text-lg font-semibold mb-1">Our Contact Info</h3>
+            <h3 className="text-lg font-semibold mb-1 text-white ">
+              Our Contact Info
+            </h3>
             <p className="text-gray-400">
               <a href="tel:0651-2332534" className=" hover:text-yellow-400 ">
                 0651-2999931

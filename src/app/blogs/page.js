@@ -51,7 +51,7 @@ const blogs = [
 export default function BlogPage() {
   return (
     <>
-      <WhHeader />
+      <WhHeader pageTheme="white" />
 
       <section className="max-w-7xl mx-auto px-6 py-16">
         {/* Section Heading */}
