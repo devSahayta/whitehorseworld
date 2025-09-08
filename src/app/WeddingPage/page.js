@@ -206,7 +206,7 @@ import HomeBanner from "../portfolio/page";
 export default function WeddingPage() {
   return (
     <>
-      <WhHeader />
+      <WhHeader pageTheme="White" />
 
       <HomeBanner />
       <div className="relative w-full  bg-white  mx-auto px-12 py-14">
