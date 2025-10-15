@@ -63,7 +63,7 @@ export default function Testimonials1() {
             transition={{ duration: 0.6, delay: i * 0.2, ease: "easeOut" }}
           >
             {/* Profile Image */}
-            <motion.div
+            {/* <motion.div
               className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full border-4 border-yellow-500 overflow-hidden shadow-lg"
               whileHover={{ rotate: 5, scale: 1.05 }}
               transition={{ type: "spring", stiffness: 200 }}
@@ -73,7 +73,7 @@ export default function Testimonials1() {
                 alt={t.name}
                 className="w-full h-full object-cover"
               />
-            </motion.div>
+            </motion.div> */}
 
             <h4 className="mt-4 font-bold text-gray-800">TESTIMONIAL</h4>
 

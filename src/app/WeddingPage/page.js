@@ -345,7 +345,7 @@ const weddings = [
     hueA: 340,
     hueB: 10,
   },
-  { title: "Royal Wedding", img: "/images/gallery/11.png", hueA: 20, hueB: 40 },
+  { title: "Royal Wedding", img: "/images/gallery/11.jpg", hueA: 20, hueB: 40 },
   {
     title: "Beach Wedding",
     img: "/images/gallery/gallery1.jpg",

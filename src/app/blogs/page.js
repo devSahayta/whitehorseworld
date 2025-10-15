@@ -12,21 +12,23 @@ import Testimonials1 from "../components/home/Testimonials1";
 const blogs = [
   {
     id: 1,
-    title: "Government Event Excellence",
-    desc: " lorem A glimpse into how Whitehorse organizes large-scale government events with flawless execution lorem A glimpse into how Whitehorse organizes large-scale government events with flawless executio.",
-    img: "/images/work/work-corporate-event.jpg",
+    title: "Wedding venues in Udaipur",
+    desc: "When couples dream of a royal yet romantic wedding, Udaipur is often the first city that comes to mind. Known as the “city of lakes” and the “Venice of the East,” Udaipur offers a magical mixture of heritage and luxury. Grand palaces, historic forts, serene lakes and luxury resorts, this city has everything needed to turn a wedding into an unforgettable experience. It is no surprise that Udaipur is one of the most sought- after wedding destinations not only in India but also internationally.",
+
+    img: "/images/work/Udaipur.png",
   },
+
   {
     id: 2,
-    title: "Corporate Event Innovation",
-    desc: "howInnovative solutions that transform corporate gatherings into unforgettable experiences.",
-    img: "/images/work/work-exhibition-fair.jpg",
+    title: "Wedding trends of 2025",
+    desc: "The world of weddings is evolving faster than ever. With couples looking for ways to make their big day more meaningful, stylish, and personalized, 2025 is shaping up to be an exciting year for the wedding industry. From intimate luxury weddings to tech-driven celebrations, the trends reflect not only changing aesthetics but also deeper values around sustainability, personalization, and guest experience..",
+    img: "/images/work/111.jpg",
   },
   {
     id: 3,
-    title: "Sports Event Management",
-    desc: "Our sports events are adrenaline-packed with world-class organization.",
-    img: "/images/banner-collage.png",
+    title: "How to save big on wedding decor without losing style?",
+    desc: "Planning a wedding is exciting, but it can also be overwhelming, especially when you start looking at the costs. One area that often surprises couples with its price tag is wedding decor. Be it the fresh flowers, fabric draping, lights, designs, it all adds up quickly. But what if we told you that you can have the wedding of your dreams without breaking the bank on decor? It’s absolutely possible! In this blog, let’s explore smart strategies, creative ideas, and insider tips which will help you save big on wedding decor while still creating a stunning and memorable celebration..",
+    img: "/images/work/A.jpg",
   },
   {
     id: 4,

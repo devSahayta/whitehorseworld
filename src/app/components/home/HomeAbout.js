@@ -46,9 +46,9 @@ export default function HomeAbout() {
         className="relative z-10 px-4 text-white max-w-3xl"
       >
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
-          Reimagine{" "}
-          <span className="italic text-yellow-400 font-ds ">(Almost)</span>{" "}
-          Everything
+          Crafting{" "}
+          <span className="italic text-yellow-400 font-ds ">(Timeless)</span>{" "}
+          Celebrations
         </h1>
         <p className="text-lg md:text-xl text-gray-200 mb-6 home-about-para">
           We are White Horse Event Management — Go Getters, Planners, Artists,
