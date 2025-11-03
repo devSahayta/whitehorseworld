@@ -32,6 +32,15 @@ export function ChatWidget() {
   return <MochiiWidget apiKey="mc_34421a47588b4392a39f05c0244acfc4" />;
 }
 
+if (typeof window !== "undefined") {
+  window.addEventListener("error", (e) => {
+    const chunkFailed = /Loading chunk [\d]+ failed/;
+    if (e.message && e.message.match(chunkFailed)) {
+      window.location.reload();
+    }
+  });
+}
+
 export default function Home() {
   return (
     <div className=" bg-gray-100 ">

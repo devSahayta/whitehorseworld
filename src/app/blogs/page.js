@@ -1,4 +1,167 @@
+// "use client";
+// import { motion } from "framer-motion";
+// import Image from "next/image";
+// import Link from "next/link";
+// import FAQSection from "../components/FAQSection";
+// import { FaDiamond } from "react-icons/fa6";
+// import { Divider } from "rsuite";
+// import WhHeader from "../components/WhHeader";
+// import WhFooter from "../components/WhFooter";
+// import Testimonials1 from "../components/home/Testimonials1";
+
+// const blogs = [
+//   {
+//     id: 1,
+//     title: "Wedding venues in Udaipur",
+//     desc: "When couples dream of a royal yet romantic wedding, Udaipur is often the first city that comes to mind. Known as the “city of lakes” and the “Venice of the East,” Udaipur offers a magical mixture of heritage and luxury. Grand palaces, historic forts, serene lakes and luxury resorts, this city has everything needed to turn a wedding into an unforgettable experience. It is no surprise that Udaipur is one of the most sought- after wedding destinations not only in India but also internationally.",
+
+//     img: "/images/work/Udaipur.png",
+//   },
+
+//   {
+//     id: 2,
+//     title: "Wedding trends of 2025",
+//     desc: "The world of weddings is evolving faster than ever. With couples looking for ways to make their big day more meaningful, stylish, and personalized, 2025 is shaping up to be an exciting year for the wedding industry. From intimate luxury weddings to tech-driven celebrations, the trends reflect not only changing aesthetics but also deeper values around sustainability, personalization, and guest experience..",
+//     img: "/images/work/111.jpg",
+//   },
+//   {
+//     id: 3,
+//     title: "How to save big on wedding decor without losing style?",
+//     desc: "Planning a wedding is exciting, but it can also be overwhelming, especially when you start looking at the costs. One area that often surprises couples with its price tag is wedding decor. Be it the fresh flowers, fabric draping, lights, designs, it all adds up quickly. But what if we told you that you can have the wedding of your dreams without breaking the bank on decor? It’s absolutely possible! In this blog, let’s explore smart strategies, creative ideas, and insider tips which will help you save big on wedding decor while still creating a stunning and memorable celebration..",
+//     img: "/images/work/A.jpg",
+//   },
+//   {
+//     id: 4,
+//     title: "Government Event Excellence",
+//     desc: "A glimpse into how Whitehorse organizes large-scale government events with flawless execution.",
+//     img: "https://source.unsplash.com/800x600/?conference,government",
+//   },
+//   {
+//     id: 5,
+//     title: "Corporate Event Innovation",
+//     desc: "Innovative solutions that transform corporate gatherings into unforgettable experiences.",
+//     img: "https://source.unsplash.com/800x600/?business,event",
+//   },
+//   {
+//     id: 6,
+//     title: "Sports Event Management",
+//     desc: "Our sports events are adrenaline-packed with world-class organization.",
+//     img: "https://source.unsplash.com/800x600/?sports,stadium",
+//   },
+// ];
+
+// export default function BlogPage() {
+//   return (
+//     <>
+//       <WhHeader pageTheme="white" />
+
+//       <section className="max-w-7xl mx-auto px-6 py-16">
+//         {/* Section Heading */}
+//         <motion.h2
+//           initial={{ opacity: 0, y: -50 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+//           className="text-4xl font-semibold text-center text-yellow-400 mb-4"
+//         >
+//           Our Latest Blog
+//         </motion.h2>
+
+//         {/* Divider */}
+//         <Divider
+//           className="w-about-divider text-yellow-400"
+//           style={{ width: "25%", margin: "auto", marginBottom: "96px" }}
+//         >
+//           <FaDiamond size={10} /> <FaDiamond size={20} className="ml-1 mr-1" />
+//           <FaDiamond size={10} />
+//         </Divider>
+
+//         {/* Blog Grid */}
+//         <Link href="../Blog1/b1.js">
+//           <div className="grid md:grid-cols-3 gap-8">
+//             {blogs.map((blog, i) => (
+//               <motion.div
+//                 key={blog.id}
+//                 initial={{ opacity: 0, y: -100 }} // start from top
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 transition={{
+//                   duration: 0.8,
+//                   ease: "easeOut",
+//                   delay: i * 0.2,
+//                 }}
+//                 whileHover={{
+//                   scale: 1.05,
+//                   boxShadow: "0px 12px 30px rgba(0, 0, 0, 0.25)",
+//                 }}
+//                 className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer"
+//               >
+//                 {/* Image */}
+//                 <div className="overflow-hidden">
+//                   <Image
+//                     src={blog.img}
+//                     alt={blog.title}
+//                     width={500}
+//                     height={400}
+//                     className="w-full h-60 object-cover transition-transform duration-500 hover:scale-110"
+//                   />
+//                 </div>
+
+//                 {/* Text Content */}
+//                 <div className="p-6">
+//                   <h2 className="text-2xl font-semibold mb-2 text-gray-800">
+//                     {blog.title}
+//                   </h2>
+//                   <p className="text-gray-600">{blog.desc}</p>
+//                 </div>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </Link>
+
+//         {/* See More Button */}
+//         <div className="flex justify-center mt-12">
+//           <Link href="/Blog1/b1.js">
+//             <motion.button
+//               whileHover={{
+//                 scale: 1.1,
+//                 boxShadow: "0px 0px 25px rgba(255, 215, 0, 0.8)",
+//               }}
+//               whileTap={{ scale: 0.95 }}
+//               className="relative px-10 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-pink-500 text-black font-bold text-lg tracking-wide shadow-lg overflow-hidden"
+//             >
+//               <span className="relative z-10">See More</span>
+//               {/* Shimmer effect */}
+//               <motion.span
+//                 className="absolute inset-0 bg-white/30"
+//                 initial={{ x: "-100%" }}
+//                 animate={{ x: "100%" }}
+//                 transition={{
+//                   repeat: Infinity,
+//                   duration: 2,
+//                   ease: "linear",
+//                 }}
+//               />
+//             </motion.button>
+//           </Link>
+//         </div>
+
+//         {/* FAQs Section */}
+//       </section>
+//       <>
+//         {Testimonials1()}
+
+//         {FAQSection()}
+//       </>
+
+//       <WhFooter />
+//     </>
+//   );
+// }
+
+// -----------------------------------------------new--------------------------------------------------------------
+
 "use client";
+export const dynamic = "force-dynamic";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,40 +176,20 @@ const blogs = [
   {
     id: 1,
     title: "Wedding venues in Udaipur",
-    desc: "When couples dream of a royal yet romantic wedding, Udaipur is often the first city that comes to mind. Known as the “city of lakes” and the “Venice of the East,” Udaipur offers a magical mixture of heritage and luxury. Grand palaces, historic forts, serene lakes and luxury resorts, this city has everything needed to turn a wedding into an unforgettable experience. It is no surprise that Udaipur is one of the most sought- after wedding destinations not only in India but also internationally.",
-
+    desc: "When couples dream of a royal yet romantic wedding, Udaipur is often the first city that comes to mind...",
     img: "/images/work/Udaipur.png",
   },
-
   {
     id: 2,
     title: "Wedding trends of 2025",
-    desc: "The world of weddings is evolving faster than ever. With couples looking for ways to make their big day more meaningful, stylish, and personalized, 2025 is shaping up to be an exciting year for the wedding industry. From intimate luxury weddings to tech-driven celebrations, the trends reflect not only changing aesthetics but also deeper values around sustainability, personalization, and guest experience..",
+    desc: "The world of weddings is evolving faster than ever...",
     img: "/images/work/111.jpg",
   },
   {
     id: 3,
     title: "How to save big on wedding decor without losing style?",
-    desc: "Planning a wedding is exciting, but it can also be overwhelming, especially when you start looking at the costs. One area that often surprises couples with its price tag is wedding decor. Be it the fresh flowers, fabric draping, lights, designs, it all adds up quickly. But what if we told you that you can have the wedding of your dreams without breaking the bank on decor? It’s absolutely possible! In this blog, let’s explore smart strategies, creative ideas, and insider tips which will help you save big on wedding decor while still creating a stunning and memorable celebration..",
+    desc: "Planning a wedding is exciting, but it can also be overwhelming...",
     img: "/images/work/A.jpg",
-  },
-  {
-    id: 4,
-    title: "Government Event Excellence",
-    desc: "A glimpse into how Whitehorse organizes large-scale government events with flawless execution.",
-    img: "https://source.unsplash.com/800x600/?conference,government",
-  },
-  {
-    id: 5,
-    title: "Corporate Event Innovation",
-    desc: "Innovative solutions that transform corporate gatherings into unforgettable experiences.",
-    img: "https://source.unsplash.com/800x600/?business,event",
-  },
-  {
-    id: 6,
-    title: "Sports Event Management",
-    desc: "Our sports events are adrenaline-packed with world-class organization.",
-    img: "https://source.unsplash.com/800x600/?sports,stadium",
   },
 ];
 
@@ -56,7 +199,6 @@ export default function BlogPage() {
       <WhHeader pageTheme="white" />
 
       <section className="max-w-7xl mx-auto px-6 py-16">
-        {/* Section Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +208,6 @@ export default function BlogPage() {
           Our Latest Blog
         </motion.h2>
 
-        {/* Divider */}
         <Divider
           className="w-about-divider text-yellow-400"
           style={{ width: "25%", margin: "auto", marginBottom: "96px" }}
@@ -75,13 +216,12 @@ export default function BlogPage() {
           <FaDiamond size={10} />
         </Divider>
 
-        {/* Blog Grid */}
-        <Link href="../Blog1">
-          <div className="grid md:grid-cols-3 gap-8">
-            {blogs.map((blog, i) => (
+        {/* ✅ Blog Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {blogs.map((blog, i) => (
+            <Link href={`/Blog1/${blog.id}`} key={blog.id}>
               <motion.div
-                key={blog.id}
-                initial={{ opacity: 0, y: -100 }} // start from top
+                initial={{ opacity: 0, y: -100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.8,
@@ -94,7 +234,6 @@ export default function BlogPage() {
                 }}
                 className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer"
               >
-                {/* Image */}
                 <div className="overflow-hidden">
                   <Image
                     src={blog.img}
@@ -104,8 +243,6 @@ export default function BlogPage() {
                     className="w-full h-60 object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </div>
-
-                {/* Text Content */}
                 <div className="p-6">
                   <h2 className="text-2xl font-semibold mb-2 text-gray-800">
                     {blog.title}
@@ -113,13 +250,13 @@ export default function BlogPage() {
                   <p className="text-gray-600">{blog.desc}</p>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </Link>
+            </Link>
+          ))}
+        </div>
 
-        {/* See More Button */}
         <div className="flex justify-center mt-12">
-          <Link href="/Blog1">
+          {/* Optional: link to /Blog1/1 or a blog overview */}
+          <Link href="/Blog1/1">
             <motion.button
               whileHover={{
                 scale: 1.1,
@@ -129,7 +266,6 @@ export default function BlogPage() {
               className="relative px-10 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-pink-500 text-black font-bold text-lg tracking-wide shadow-lg overflow-hidden"
             >
               <span className="relative z-10">See More</span>
-              {/* Shimmer effect */}
               <motion.span
                 className="absolute inset-0 bg-white/30"
                 initial={{ x: "-100%" }}
@@ -143,15 +279,10 @@ export default function BlogPage() {
             </motion.button>
           </Link>
         </div>
-
-        {/* FAQs Section */}
       </section>
-      <>
-        {Testimonials1()}
 
-        {FAQSection()}
-      </>
-
+      {Testimonials1()}
+      {FAQSection()}
       <WhFooter />
     </>
   );
